@@ -1,0 +1,178 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: auto;
+    /* background-color:whitesmoke; */
+    background-color:#f9efef;
+}
+
+/* navbar logo search tabs */
+
+nav {
+    /* background-color:rgb(31, 27, 57); */
+    padding: 0.8rem 3vw;
+    /* color: whitesmoke; */
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-box a {
+    font-weight: bold;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: medium;
+}
+
+.top-line{
+    justify-content: space-between;
+}
+
+.nav-Bottom a{
+    /* background-color: royalblue; */
+    margin: 1rem 2vw 1rem 0rem;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.row{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.search-bar{
+    background-color: white;
+    border-radius: 6px;
+    /* background-color:#eeeeee; */
+    border: 1.2px solid #eee;
+}
+
+.search-bar img {
+    margin: 0px 2px 1px 8px;
+}
+
+.search-bar input {
+    
+    border: 0px;
+    color: #808080;
+    width: 35vw;
+    height: 2.4rem;
+    padding: 0px 0.3rem; 
+    border-radius: 6px;
+    background-color:#eeeeee00;
+}
+
+#logo{
+    width: 13rem;
+}
+
+#signupBtn {
+    margin: 0px 1.2rem;
+}
+
+#user-icon {
+    width: 12px;
+    height: fit-content;
+    margin: 0px 3px;
+}
+
+#cart-icon {
+    width: 15px;
+    height: fit-content;
+    margin: 0px 6px;
+}
+
+.menu-box {
+    display: none;
+}
+
+#floating-nav{
+    display: none;
+}
+
+@media (width > 820){
+    
+    
+}
+
+
+@media (width <= 820px) {
+    body{
+        background-color: floralwhite;
+    }
+
+    .search-bar input {
+        width: 15vw
+    }
+
+    .menu-box {
+        display: none;
+    }
+}
+
+@media (width < 600px) {
+    body{
+        background-color: #f9efef;
+    }
+
+    .top-line {
+        display: none;
+    }
+
+    .nav-Bottom {
+        display: none;
+    }
+
+    .menu-box {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0px 1.6rem;
+    }
+    
+    .menu-box img {
+        width: 10rem;
+    }
+
+    
+    #menu {
+        background-color: transparent;
+        border: 0px;
+        font-size: large;
+        font-weight: bold;
+        display: flex;
+        padding: 0.4rem 0.6rem;
+        align-items: center;
+    }
+    
+    #menu img{
+        width: 24px
+    }
+    
+    #floating-nav {
+        display: block;
+        position: absolute;
+        left: 0px;
+        right: 0px;
+        top: 5rem;
+        background-color: #e8d8d8e8;
+        padding: 1rem 2rem;
+    }
+
+    .categories  {
+        display: flex;
+        flex-direction: column;
+        font-size: medium;
+        line-height: 1.6rem;
+    }
+
+    .categories h4{
+        margin-bottom: 0.4rem;
+    }
+
+    #signup{
+        margin-top: 1rem
+    }
+    
+
+
+}
