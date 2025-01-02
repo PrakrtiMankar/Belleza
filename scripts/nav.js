@@ -89,6 +89,3 @@ nav.append(navBottom);
     
 // }
 
-
-
-console.log(Images.banners)
