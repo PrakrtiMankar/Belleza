@@ -14,8 +14,15 @@ const Home_banners = [
 const offers = [
     "./assets/banners/bannerHome6.gif",
     "./assets/banners/bannerHome7.gif"
+];
+
+const boards = [
+    "./assets/banners/bannerBody4.jpg",
+    "./assets/banners/bannerBody6.jpg",
+    "./assets/banners/bannerBody7.jpg"
 ]
 
 export const Images = {
-    logo, Home_banners, offers
+    logo, Home_banners, offers,
+    boards
 }

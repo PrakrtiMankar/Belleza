@@ -66,12 +66,12 @@ footer.innerHTML = `<footer class="belleza-footer">
     </div>
 
     <!-- Section 6: Payment Methods -->
-    <div class="footer-section">
+    <div class="footer-section payment">
       <h4>Payment Methods</h4>
-      <img src="${Icons.payment[0]}" alt="Visa">
-      <img src="${Icons.payment[1]}" alt="Mastercard">
-      <img src="${Icons.payment[2]}" alt="Paytm">
-      <img src="${Icons.payment[3]}" alt="Google Pay">
+      <img src="${Icons.payment[0]}" alt="Visa" />
+      <img src="${Icons.payment[1]}" alt="Mastercard" />
+      <img src="${Icons.payment[2]}" alt="Paytm" />
+      <img src="${Icons.payment[3]}" alt="Google Pay" />
     </div>
   </div>
 

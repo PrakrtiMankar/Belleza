@@ -4,25 +4,10 @@ let main_Home = document.querySelector('.main-home');
 
 // banners ✨✨
 showBanners();
-// console.log(Images.Home_banners);
 function showBanners() {
     let bannerArr = Images.Home_banners;
     let bannerSection = document.createElement('section');
     main_Home.append(bannerSection);
-
-    // bannerArr.map((item, index) => {
-
-        
-    //     let banner_Img = document.createElement('img');
-    //     banner_Img.src = item;
-
-        
-
-    //     setInterval(() => {
-    //         // bannerSection.append(banner_Img);
-    //         // bannerSection.innerHTML = '';
-    //     }, 3000);
-    // })
 
     // Create an image element for the banner
     let bannerImg = document.createElement('img');
@@ -72,4 +57,47 @@ function showOffers() {
 
 }
 
-// footer ✨✨
+// boards ✨✨
+let boardBox = document.createElement('div');
+boardBox.classList.add('board');
+let offerH4 = document.createElement('h4');
+offerH4.innerHTML = `
+<h3 id="offer-h4">
+    <hr id="hr"/>
+    Weekly Fashion Inspo | ❁ Your Style Guide ❁ | Fashion Boards
+    <hr id="hr"/>
+</h3>`;
+main_Home.append(offerH4);
+
+let boardRow = document.createElement('div');
+boardRow.classList.add('board-row');
+boardBox.append(boardRow);
+main_Home.append(boardBox);
+
+showBoards(0, 3000);
+showBoards(1, 3160);
+showBoards(2, 3340);
+
+function showBoards(start_index, duration) {
+
+    let boardSection = document.createElement('board');
+    // boardSection.style.background = 'red';
+    // boardSection.style.dislpay = 'grid';
+    // boardSection.style.gridTemplateColumns = 'auto auto'
+    boardBox.append(boardSection);
+
+    let boardArr = Images.boards;
+    
+    let boardImg = document.createElement('img');
+    boardImg.src = boardArr[start_index]; // Set the first image initially
+    boardImg.style.transition = 'opacity 0.5s ease-in-out';
+    boardSection.append(boardImg);
+
+    let currentIndex = start_index;
+    function updateBanner() {
+        currentIndex = (currentIndex + 1) % boardArr.length; // Cycle through the images
+        boardImg.src = boardArr[currentIndex];
+    }
+    setInterval(updateBanner, duration);
+
+}
