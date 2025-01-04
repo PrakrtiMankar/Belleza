@@ -4,8 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
+    <link rel="stylesheet" href="styles/styles.css" />
+    <link rel="stylesheet" href="styles/signupStyles.css" />
 </head>
 <body>
-    <h1>Login</h1>
+    <!-- header -->
+    <header id="header"></header>
+    <!-- container -->
+    <main class="main-signup">
+        <!-- headings -->
+        <h2>Log In<h2/>
+        <h6>
+            Don't have an account yet? 
+            <a href="login.html">Create an account</a>
+        </h6>
+
+        <!-- form -->
+        <form id="form">
+            <!-- <input name="fullName" type="text" placeholder="Your name" /> -->
+            <!-- <input name="username" type="text" placeholder="Username" /> -->
+            <input name="email"  type="email" placeholder="Your Email" />
+            <input name="password" type="password" placeholder="Password" />
+            <div class="checkbox-div">
+                <input type="checkbox" id="checkbox" name="checkbox" />
+                <label for="checkbox">Stay Signed In</label>
+            </div>
+            <input id="submit" name="submit" type="submit" value="Log In" />
+        </form>
+
+        <h6>Or, Login with</h6>
+
+        <div class="login-bottom">
+            <button id="facebook"><img src="./assets/icons/facebook.png"/>facebook</button>
+            <button id="google"><img src="./assets/icons/google.png"/>Google</button>
+        </div>
+    </main>
 </body>
+<script src="scripts/signup.js" type="module"></script>
 </html>
