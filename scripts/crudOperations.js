@@ -1,8 +1,10 @@
+import {baseUrl} from './baseUrl.js';
+
 // post data to local storage
 export const postData = (userData, bodyContent) => {
     console.log('post Data', userData, bodyContent)
 
-    fetch(`https://unmarred-blue-delivery.glitch.me/users`)
+    fetch(`${baseUrl}/users`)
     .then((res) => res.json())
     .then((data) => {
         console.log(data, "users Data from API")
@@ -33,3 +35,19 @@ export const postData = (userData, bodyContent) => {
         alert("Somthing went wrong, Please try again later")
     });
 };
+
+export const getData = async (token) => {
+    let dataArr;
+    try{
+        const response = await fetch(`${baseUrl}/${token}`)
+        if(!response.ok){
+            throw new Error(`error in status: ${response.status}`);
+        }
+        const data = await response.json();
+        console.log('fetched data', data);
+        return data; 
+    } catch (err) {
+        console.log(err)
+        alert("Error while fetching the data")
+    };
+}

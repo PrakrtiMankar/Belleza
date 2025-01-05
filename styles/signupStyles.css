@@ -9,7 +9,7 @@ header {
 }
 
 .header-nav img {
-    width: 13rem;
+    width: 11rem;
 }
 
 .main-signup {
@@ -32,7 +32,8 @@ form {
     display: flex;
     flex-direction: column;
     background-color: white;
-    width: 26%;
+    width: 20.5rem;
+    /* width: 26%; */
     padding: 2rem;
     box-sizing: 2px 2px 3px #000;
 }
@@ -102,4 +103,16 @@ form #checkbox{
 
 #google {
     background-color: rgb(227, 29, 68);
+}
+
+@media (width < 600px){
+
+    form {
+        min-width: 16rem;
+        width: 60vw;
+    }
+
+    #form {
+        min-width: 16rem;
+    }
 }

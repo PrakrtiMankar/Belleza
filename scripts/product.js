@@ -1,30 +1,164 @@
+import {getData} from "./crudOperations.js";
+
+// ⛳ check for userData
+let userArr = [];
 
 
-// main container of product
+// ✨✨main container of product
 let main_Product = document.getElementById('main-product');
-// main_Product.innerHTML = `<h4>Product page</h4>`;
 
-// side bar for filter and sorting
+// ✨✨ side bar for filter and sorting
 let sideBar = document.getElementById('side-bar');
 sideBar.innerHTML = `
-    <h4>Filter products</h4>
+    <ul>
+        <h3>Filter:</h3>
+        <select id="filter">
+            <option>All Products</option>
+            <option>Fashion</option>
+            <option>Beauty</option>
+            <option>Luxury</option>
+            <option>Skincare</option>
+            <option>Accessories</option>
+        </select>
+        <h3>Sort:</h3>
+        <select id="sort">
+            <option>none</option>
+            <option>A-Z</option>
+            <option>Z-A</option>
+        </select>
+    </ul>
+    
+    <h5></h5>
 `;
 
-// product card container
+// ✨✨ product card container
 let pBox = document.getElementById('product-box');
 
-// product card
-let pCard = document.createElement('div');
-pCard.classList.add('card');
-pCard.innerHTML = `
-    <img src="../assets/products/product(17 perfumes elegantes y duraderos de mujer que son MUY especiales).jpg" />
-    <img src="../assets/products/product(17 perfumes elegantes y duraderos de mujer que son MUY especiales).jpg" />
-    <img src="../assets/products/product(17 perfumes elegantes y duraderos de mujer que son MUY especiales).jpg" />
-    <img src="../assets/products/product(17 perfumes elegantes y duraderos de mujer que son MUY especiales).jpg" />
-    <img src="../assets/products/product(17 perfumes elegantes y duraderos de mujer que son MUY especiales).jpg" />
+// ✨✨ top-section
+let topSection = document.createElement('section');
+topSection.innerHTML = ``
 
-    `;
-pBox.append(pCard);
+// ⛳ product array
+let productArr = [];
+
+// ➿ function to get product data
+const fetchProducts = async () => {
+    const token = 'products';
+    productArr = await getData(token);
+    if(productArr){
+        console.log('successfully retrived data', productArr);
+        showProducts(productArr);
+    }
+    else{
+        console.log('failed to fetch data')
+    }
+}
+fetchProducts();
+
+// ➿ fucntion to display products
+function showProducts(arr) {
+    // ⛳product card
+    arr.map((item, index) => {
+        let pCard = document.createElement('div');
+        pCard.classList.add('card');
+        pCard.innerHTML = `
+            <img id="pimg" src="${item.images}" />
+            <div id="detail">
+                <h5>${item.pname}</h5>
+                <div class="row">
+                    <h6>₹${item.price}</h6>
+
+                    <div>
+                        <img id="star" src="../assets/icons/star.png" />
+                        <img id="star" src="../assets/icons/star.png" />
+                        <img id="star" src="../assets/icons/star.png" />
+                        <img id="star" src="../assets/icons/star.png" />
+                        <img id="star" src="../assets/icons/star.png" />
+                    </div>
+                </div>
+                <p>${item.description}</p>
+            </div>
+        `;
+        pBox.append(pCard);
+    })
 
 
-console.log(pBox);
+    console.log("ppp");
+};
+
+// ➿ function to filter and sort
+let modifiedArr = []; // product arr after manipulation
+let filter = document.getElementById('filter');
+let sort = document.getElementById('sort');
+
+// ⭐ filter fucntion
+filter.addEventListener('change', () => {
+
+    if(filter.value.toLowerCase() == 'all products'){
+        modifiedArr = productArr
+    }
+    else{
+        modifiedArr = productArr.filter((item, index) => {
+            if(filter.value.toLowerCase() == item.category){
+                return item
+            }
+        })
+    }
+    pBox.innerHTML = '';
+    showProducts(modifiedArr);
+    // console.log(modifiedArr, filter.value, 'fff');
+})
+
+// ⭐ sorting function
+sort.addEventListener('change', () => {
+    let sortedArr = modifiedArr.length == 0 ? productArr : modifiedArr
+    // console.log(sortedArr.length, "sortedArr")
+
+    if(sort.value.toLowerCase() != 'none'){
+        sortedArr = sortedArr.sort((a,b) => {
+            // console.log(a.pname, b.pname)
+            const nameA =  a.pname.toUpperCase();
+            const nameB =  b.pname.toUpperCase();
+            if(sort.value.toLowerCase() == 'a-z'){
+                if(nameA < nameB) {
+                    return -1;
+                }
+                if(nameA > nameB) {
+                    return 1;
+                }
+                return 0;
+            }
+            else{
+                if(nameA < nameB) {
+                    return 1;
+                }
+                if(nameA > nameB) {
+                    return -1;
+                }
+                return 0;
+            }
+
+        })
+    }
+    
+    pBox.innerHTML = '';
+    showProducts(sortedArr)
+});
+
+console.log(pBox, filter, sort);
+
+// 📋 category and price future scope
+{/* <ul>
+    <h3>Categories</h3>
+    <li><input type="checkbox" name="tops">Tops</input></li>
+    <li><input type="checkbox" name="sweatshirt">Sweatshirt</input></li>
+    <li><input type="checkbox" name="jacket">Jeans</input></li>
+    </ul>
+
+    <ul>
+    <h3>Price</h3>
+    <li><input type="checkbox" name="5000above>">above 5000</input></li>
+    <li><input type="checkbox" name="5000-2000">5000 - 2000</input></li>
+    <li><input type="checkbox" name="below2000">below 2000</input></li>
+    </ul> 
+*/}
