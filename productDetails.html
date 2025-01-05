@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Details - WOSA</title>
+  <style>
+    /* General styles */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      background-color: #fff;
+      border-bottom: 1px solid #ddd;
+    }
+
+    header nav a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: #333;
+    }
+
+    main {
+      padding: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    /* Product Section */
+    .product-container {
+      display: flex;
+      gap: 20px;
+    }
+
+    .product-images {
+      flex: 1;
+    }
+
+    .product-images img {
+      width: 100%;
+      margin-bottom: 10px;
+      cursor: pointer;
+    }
+
+    .product-details {
+      flex: 2;
+    }
+
+    .product-details h1 {
+      margin: 0;
+      font-size: 24px;
+      color: #333;
+    }
+
+    .product-details .price {
+      margin: 10px 0;
+      font-size: 18px;
+    }
+
+    .price .original-price {
+      text-decoration: line-through;
+      color: #999;
+      margin-left: 10px;
+    }
+
+    .options {
+      margin: 20px 0;
+    }
+
+    .options label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+
+    .options select,
+    .options input {
+      padding: 5px;
+      margin-bottom: 10px;
+      width: 100%;
+      max-width: 300px;
+    }
+
+    .buy-buttons {
+      display: flex;
+      gap: 10px;
+    }
+
+    .buy-buttons button {
+      padding: 10px 20px;
+      background-color: #333;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+    }
+
+    .buy-buttons button:hover {
+      background-color: #555;
+    }
+
+    .product-tabs {
+      margin-top: 40px;
+    }
+
+    .product-tabs button {
+      padding: 10px 20px;
+      border: none;
+      background-color: #f7f7f7;
+      cursor: pointer;
+      margin-right: 5px;
+    }
+
+    .product-tabs button.active {
+      background-color: #333;
+      color: #fff;
+    }
+
+    .tab-content {
+      margin-top: 20px;
+      padding: 20px;
+      border: 1px solid #ddd;
+      background-color: #f9f9f9;
+    }
+
+    /* Footer Section */
+    footer {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    footer a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+  </style>
+  <link rel="stylesheet" href="styles/styles.css" />
+  <link rel="stylesheet" href="styles/footerStyles.css" />
+</head>
+<body>
+  <!-- Header -->
+  <nav></nav>
+
+  <!-- Main Content -->
+  <main>
+    <!-- Product Section -->
+    <div class="product-container">
+      <!-- Product Images -->
+      <div class="product-images">
+        <img src="./assets/products/sweatshirt1.jpg" alt="Product Image 1">
+        <img src="./assets/products/top1.jpg" alt="Product Image 2">
+        <img src="./assets/products/top1.jpg" alt="Product Image 3">
+      </div>
+
+      <!-- Product Details -->
+      <div class="product-details">
+        <h1>Sweatshirt Covernat Unisex Arch Logo Sweatshirt Ecru</h1>
+        <div class="price">
+          ₹1200.00 <span class="original-price">₹2000.00</span>
+        </div>
+        <div class="options">
+          <label for="color">Color:</label>
+          <select id="color">
+            <option>White</option>
+            <option>Black</option>
+          </select>
+
+          <label for="size">Size:</label>
+          <select id="size">
+            <option>S</option>
+            <option>M</option>
+            <option>L</option>
+            <option>XL</option>
+          </select>
+
+          <label for="quantity">Quantity:</label>
+          <input type="number" id="quantity" min="1" value="1">
+        </div>
+
+        <div class="buy-buttons">
+          <button>Buy Now</button>
+          <button>Add to Cart</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tabs for Product Details -->
+    <div class="product-tabs">
+      <button class="active">Product Description</button>
+      <button>Ratings & Reviews</button>
+      <button>Questions</button>
+    </div>
+    <div class="tab-content">
+      <p>This is a description of the product.</p>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer id="footer"></footer>
+</body>
+<script src="scripts/nav.js" type="module" ></script>
+<script src="scripts/footer.js" type="module" ></script>
+</html>

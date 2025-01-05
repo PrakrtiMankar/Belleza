@@ -4,8 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cart</title>
+    <link rel="stylesheet" href="../styles/styles.css" />
+    <link rel="stylesheet" href="../styles/footerStyles.css" />
 </head>
 <body>
-    <h1>Cart</h1>
+    <nav></nav>
+
+    <header>
+        <h2 style="padding: 0rem 2rem">Your Shopping Cart</h2>
+    </header>
+    <main style="padding: 0rem 2rem;">
+        <section id="cart-container">
+            <h3 id="cart-title">Products in Your Cart</h3>
+            <div id="cart-items"></div>
+        </section>
+        <section id="cart-summary">
+            <h3>Summary</h3>
+            <p>Total Items: <span id="total-items">0</span></p>
+            <p>Total Price: ₹<span id="total-price">0</span></p>
+            <button id="checkout-btn">Checkout</button>
+        </section>
+    </main>
+
+    <!-- footer -->
+    <footer id="footer"></footer>
 </body>
-Cart
+<script src="./scripts/nav.js" type="module"></script>
+<script src="scripts/cart.js" type="module" ></script>
+<script src="./scripts/footer.js" type="module"></script>
+</html>

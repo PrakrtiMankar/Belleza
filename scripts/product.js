@@ -59,6 +59,7 @@ fetchProducts();
 function showProducts(arr) {
     // ⛳product card
     arr.map((item, index) => {
+        let desp = window.innerWidth < 800 ? `${item.description.slice(0,20)}...` :  `${item.description.slice(0,40)}...`;
         let pCard = document.createElement('div');
         pCard.classList.add('card');
         pCard.innerHTML = `
@@ -76,15 +77,40 @@ function showProducts(arr) {
                         <img id="star" src="../assets/icons/star.png" />
                     </div>
                 </div>
-                <p>${item.description}</p>
+                <p>${desp}</p>
+
+                <button class="add-to-cart">Add to Cart</button>
             </div>
         `;
+        // Add event listener for the Add to Cart button
+        pCard.querySelector(".add-to-cart").addEventListener("click", () => {
+            addToCart(item);
+        });
+
         pBox.append(pCard);
     })
 
 
     console.log("ppp");
 };
+
+// ➿ Function to add product to cart
+function addToCart(product) {
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+    // Check if the product is already in the cart
+    const existingProduct = cart.find((p) => p.id === product.id);
+
+    if (existingProduct) {
+        existingProduct.quantity += 1; // Increment quantity
+    } else {
+        product.quantity = 1; // Set initial quantity
+        cart.push(product);
+    }
+
+    localStorage.setItem("cart", JSON.stringify(cart));
+    alert(`${product.pname} has been added to your cart.`);
+}
 
 // ➿ function to filter and sort
 let modifiedArr = []; // product arr after manipulation
