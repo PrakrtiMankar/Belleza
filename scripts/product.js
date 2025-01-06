@@ -1,4 +1,5 @@
 import {getData} from "./crudOperations.js";
+import {Icons} from "../assets/icons.js";
 
 // ⛳ check for userData
 let userArr = [];
@@ -78,8 +79,12 @@ function showProducts(arr) {
                     </div>
                 </div>
                 <p>${desp}</p>
+                
+                <div class="row card-bottom">
+                    <button class="add-to-cart">Add to Cart</button>
+                    <button id="wishlistBtn" class="row">Wishlist <img id="heart-icon" src="${Icons.heart}" style="margin-right: -4px" /></button>
 
-                <button class="add-to-cart">Add to Cart</button>
+                </div>
             </div>
         `;
         // Add event listener for the Add to Cart button
@@ -87,12 +92,35 @@ function showProducts(arr) {
             addToCart(item);
         });
 
+        pCard.querySelector("#wishlistBtn").addEventListener("click", () => {
+            addToWishlist(item);
+        })
+
         pBox.append(pCard);
     })
 
 
-    console.log("ppp");
+    // console.log("product card");
 };
+
+// ➿ function to add product to wishlist
+function addToWishlist(product){
+    let wishlistData = JSON.parse(localStorage.getItem("wishlistData")) || [];
+
+    // check if product is already in wishlist
+    const existingProduct = wishlistData.find((p) => p.id === product.id);
+
+    if(existingProduct){
+        alert('product already present in wishlist');
+    }
+    else{
+        wishlistData.push(product);
+    }
+
+    localStorage.setItem("wishlistData", JSON.stringify(wishlistData));
+    alert(`${product.pname} added to wishlist`);
+
+}
 
 // ➿ Function to add product to cart
 function addToCart(product) {

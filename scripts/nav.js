@@ -12,12 +12,12 @@ nav.innerHTML = `
                     <input placeholder="Search for products, brands and more"/>
                 </div>
                 <a id="signupBtn" class="signupLink" href="signup.html"><img id="user-icon" src="${Icons.user}"/> SignUp</a>
+                <a id="wishlist" class="row" href="wishlist.html"><img id="heart-icon" src="${Icons.heart}"/>Wishlist</a>
                 <a class="row" href="cart.html"><img id="cart-icon" src="${Icons.cart}"/> Cart</a>
             <div>
         </div>
     </div>
     `;
-
 let navBottom = document.createElement('div');
 
 navBottom.innerHTML = `<div class="nav-Bottom row">
@@ -29,6 +29,9 @@ navBottom.innerHTML = `<div class="nav-Bottom row">
         <div>`;
 
 nav.append(navBottom);
+
+// ⛳ wishlist shall be hidden at first
+document.getElementById("wishlist").style.display = 'none'
 
 // console.log(nav)
 
@@ -80,9 +83,11 @@ function showNav(IsMenuShown) {
                 <a id="signup" class="signupLink" class="row" href="signup.html">
                     SignUp <img id="user-icon" src="${Icons.user}"/> 
                 </a>
+                <a id="wishlist" class="row" href="wishlist.html">Wishlist<img id="heart-icon" src="${Icons.heart}"/></a>
                 <a class="row" href="../cart.html">
                     Cart <img id="cart-icon" src="${Icons.cart}"/> 
                 </a>
+                <a id="logout" class="row" href="#">logout</a>
                 </div>
             </section>
         `;
@@ -120,6 +125,8 @@ window.onload = async () => {
             window.location.href = "login.html";
         });
 
+        // ⛳ wishlist shall be visible when user has loged in
+        document.getElementById("wishlist").style.display = 'flex'
 
     }
 };

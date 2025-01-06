@@ -2,6 +2,7 @@ let cart = "./assets/icons/cart.png";
 let search = "./assets/icons/search.png";
 let user = "./assets/icons/user.png";
 let menu = "./assets/icons/menu.png";
+let heart = "./assets/icons/heart.png";
 
 let insta = "./assets/icons/insta.png";
 let pinterest = "./assets/icons/pinterest.png";
@@ -19,5 +20,5 @@ let payment = [card, mcard, paytm, gpay];
 
 export const Icons = {
     cart, search, user, menu, 
-    social, payment
+    social, payment, heart
 };
