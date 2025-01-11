@@ -301,7 +301,7 @@ board img {
 }
 
 .card #detail {
-    padding: 0rem 0rem;
+    padding: 0rem 0rem 0rem 0px;
     width: 20vw;
 }
 
@@ -332,9 +332,26 @@ board img {
     margin-right: 2rem
 }
 
+/* button on pressed shows product */
+.card .viewProductBtn {
+    background-color: transparent;
+    display: flex;
+    padding: 0px;
+    width: auto;
+    border-width: 0px;
+    transition: 0.24s;
+}
+
+.viewProductBtn:hover {
+    transform: translateY(-3px);
+    scale: 1.02;
+    transition: 0.32s ease-in;
+}
+
 #product-box .card #pimg {
     /* width: 14rem; */
-    width: 20vw; /* change only grid columns */
+    width: 20vw; 
+    /* change only grid columns */
     height: 24vw;
     object-fit: cover;
 }
@@ -361,7 +378,133 @@ board img {
     font-size: 12px;
 }
 
+/* view Product folating modal styles */
+.viewBox {
+    position: absolute;
+    top: 6vw;
+    left: 0; 
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    display: none;
+    flex-direction: column;;
+    justify-content: center;
+    width: 60vw;
+    
+    height: 38vw;
+    background-color: #f3f1f1;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
 
+#closeView {
+    display: flex;
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    align-items: center;
+    justify-content: center;
+    /* width: 1.6rem; */
+    padding: 3px;
+    background-color: transparent;
+    border-radius: 1rem;
+    border-width: 1.4px;
+}
+
+#crossIcon {
+    width: 1rem;
+}
+
+.viewPcard {
+    display: flex;
+    flex-direction: row;
+    padding: 1.5rem;
+    /* justify-content: space-between; */
+    /* align-items: center; */
+}
+
+.viewPcard #viewImg {
+    width: 28vw;
+    max-width: 25vw;
+    height: 32vw;
+    object-fit: contain;
+}
+
+.viewDetailsBox{
+    /* background-color: #bc2f71; */
+    margin-left: 1.5rem;
+    height: 32vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.viewDetailsBox .brandCard{
+
+}
+
+.viewDetailsBox .brandImg{
+    display: flex;
+    flex-direction: row;
+}
+
+.brandImg img {
+    width: 6vw;
+    margin-right: 1.3rem;
+}
+
+.brandImg p {
+    margin-top: 0px;
+    margin-right: 1.6rem;
+}
+
+.viewPcard #viewDetailsId{
+    width: 30vw;
+    /* background-color: #ce6898; */
+    /* margin-left: 2rem; */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.viewDetails > p {
+    margin-top: 0px;
+    margin-bottom: 8px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #222;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.viewDetails > h4 {
+    margin-top: 0px;
+    margin-bottom: 22px;
+    font-size: 17px;
+    font-weight: 500;
+    color: #333;
+
+}
+
+.viewDetails > h2 {
+    margin-top: 0px;
+    margin-bottom: 6px;
+    color: #122;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.viewDetails > h2 > span{
+    
+}
+
+.viewDetails > h5{
+    color: #433;
+    font-weight: 500;
+    margin-top: 0px;
+    margin-bottom: 22px;
+}
+
+.viewDetails > h5 > span{
+    font-weight: 600;
+    text-decoration: line-through;
+}
 
 /* wishlist styles */
 #main-wishlist {

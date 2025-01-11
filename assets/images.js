@@ -1,6 +1,11 @@
 // logo
 let logo = "./assets/logo/belleza.png";
 
+//brands
+let brandLogo = [
+    "./assets/banners/brandLogo1.avif"
+];
+
 // banners
 const Home_banners = [
     "./assets/banners/bannerHome2.jpg",
@@ -24,5 +29,5 @@ const boards = [
 
 export const Images = {
     logo, Home_banners, offers,
-    boards
+    boards, brandLogo
 }

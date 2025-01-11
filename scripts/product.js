@@ -1,5 +1,6 @@
 import {getData} from "./crudOperations.js";
 import {Icons} from "../assets/icons.js";
+import {Images} from "../assets/images.js";
 
 // ⛳ check for userData
 let userArr = [];
@@ -37,7 +38,62 @@ let pBox = document.getElementById('product-box');
 
 // ✨✨ top-section
 let topSection = document.createElement('section');
-topSection.innerHTML = ``
+topSection.innerHTML = ``;
+
+
+// ✨✨ view Product
+let viewBox = document.createElement('div');
+viewBox.classList.add('viewBox');
+// viewBox.innerHTML = 
+
+let closeView = document.createElement('button');
+closeView.id = 'closeView';
+closeView.innerHTML = `<img id="crossIcon" src="${Icons.cross}" />`;
+closeView.addEventListener('click', () => {
+    viewBox.style.display = "none";
+
+    //removing previous view product detials
+    let emptyViewProduct = '';
+    localStorage.setItem("viewProductData", emptyViewProduct);
+    window.location.reload();
+})
+
+viewBox.append(closeView);
+
+function getViewData() {
+    let retriveData = localStorage.getItem("viewProductData");
+    let viewData = JSON.parse(retriveData);
+    console.log(retriveData);
+    
+    let viewPcard = document.createElement('div');
+    viewPcard.classList.add('viewPcard');
+    viewPcard.innerHTML = `
+        <img id="viewImg" src="${viewData[0].images}" />
+
+        <div class="viewDetailsBox">
+            <div id="viewDetailsId" class="viewDetails" >
+            <p>${viewData[0].pname} </p>
+            <h4>${viewData[0].description}...</h4>
+            <h2>₹${viewData[0].price} <span>30% OFF</span> </h2>
+            <h5>MRP ₹<span>4,499</span> Inclusive of all taxes</h5>
+            </div>
+
+            <div class="brandCard">
+                <h5>ABOUT MIRAGGIO</h5>
+                <div class="brandImg">
+                    <img src="${Images.brandLogo}" />
+                    <p>Miraggio pushes the boundaries of modern accessories by constantly reinventing fashion with its curated collections. Their accessories are designed to empower women.</p>
+
+                </div>
+            </div>
+        </div>
+    `;
+    
+    viewBox.append(viewPcard);
+}
+
+document.body.append(viewBox);
+
 
 // ⛳ product array
 let productArr = [];
@@ -58,13 +114,28 @@ fetchProducts();
 
 // ➿ fucntion to display products
 function showProducts(arr) {
+    //removing previous view product detials
+    let emptyViewProduct = '';
+    localStorage.setItem("viewProductData", JSON.stringify(emptyViewProduct));
+
     // ⛳product card
     arr.map((item, index) => {
         let desp = window.innerWidth < 800 ? `${item.description.slice(0,20)}...` :  `${item.description.slice(0,40)}...`;
         let pCard = document.createElement('div');
         pCard.classList.add('card');
+
+        // let imgBox = document.createElement('button');
+         // imgBox.classList.add('viewProductBtn');
+         // imgBox.id = "viewProductBtnId";
+         // imgBox.innerHTML = `<img id="pimg" src="${item.images}" />`
+ 
+         // <button class="viewProductBtn" id="viewProductBtnId" href="./product.html" onClick="viewProductPage()">
+         //     <img id="pimg" src="${item.images}" />
+        // </button>
         pCard.innerHTML = `
-            <img id="pimg" src="${item.images}" />
+            <button class="viewProductBtn" id="viewProductBtnId">
+                <img id="pimg" src="${item.images}" />
+            </button>
             <div id="detail">
                 <h5>${item.pname}</h5>
                 <div class="row">
@@ -87,6 +158,20 @@ function showProducts(arr) {
                 </div>
             </div>
         `;
+
+        //view the product on product page
+        pCard.querySelector("#viewProductBtnId").addEventListener("click", () => {
+
+            alert("show")
+            
+            let productToShow = [item, index];
+            let data = JSON.stringify(productToShow);
+            localStorage.setItem("viewProductData", data);
+            // window.location.href = "./viewProduct.html";
+            getViewData();
+            viewBox.style.display = 'flex';
+        })
+
         // Add event listener for the Add to Cart button
         pCard.querySelector(".add-to-cart").addEventListener("click", () => {
             addToCart(item);
