@@ -477,9 +477,9 @@ board img {
     justify-content: space-between;
 }
 
-.viewDetailsBox .brandCard{
+/* .viewDetailsBox .brandCard{
 
-}
+} */
 
 .viewDetailsBox .brandImg{
     display: flex;
@@ -529,9 +529,9 @@ board img {
     color: #122;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-.viewDetails > h2 > span{
+/* .viewDetails > h2 > span{
     
-}
+} */
 
 .viewDetails > h5{
     color: #433;

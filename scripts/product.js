@@ -144,11 +144,11 @@ function showProducts(arr) {
                     <h6>₹${item.price}</h6>
 
                     <div>
-                        <img id="star" src="../assets/icons/star.png" />
-                        <img id="star" src="../assets/icons/star.png" />
-                        <img id="star" src="../assets/icons/star.png" />
-                        <img id="star" src="../assets/icons/star.png" />
-                        <img id="star" src="../assets/icons/star.png" />
+                        <img id="star" src="${Icons.star}" />
+                        <img id="star" src="${Icons.star}" />
+                        <img id="star" src="${Icons.star}" />
+                        <img id="star" src="${Icons.star}" />
+                        <img id="star" src="${Icons.star}" />
                     </div>
                 </div>
                 <p>${desp}</p>
