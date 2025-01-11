@@ -11,6 +11,20 @@ Belleza - Full Stack e-commerce website - clothing, fashion, beauty, skincare - 
 - [License](#license)
 - [Contact](#contact)
 
+## Features
+- **User Authentication**: Secure login and registration system.
+- **Product Browsing**: Browse a wide range of products with detailed descriptions and images.
+- **Filtering**: Implemented filter and sorting features 
+- **Shopping Cart**: Add products to the cart and manage quantities.
+- **Add to Cart Process**: Seamless cart page with order summary and checkout.
+- **Wishlist**: View all the products on a wishlist page.
+- **Responsive Design**: Optimized for both desktop and mobile devices.
+
+## Technologies Used
+- **HTML**: Structuring and Designing the layout of web pages.
+- **CSS**: Styling the web pages and responsive website design.
+- **JavaScript**: implementing logical operations and user interactivity.
+
 ## Pages
 * Signup Page
 * Login Page
@@ -20,13 +34,6 @@ Belleza - Full Stack e-commerce website - clothing, fashion, beauty, skincare - 
 * Cart Page
 * Checkout Page
 * Payment Page
-
-## Features
-* login signup
-* filter products
-* sort products
-* add to cart
-* checkout
 
 ## credentials to login 
 email: "p@gmail.com"
