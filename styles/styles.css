@@ -113,9 +113,48 @@ nav {
 }
 
 .user-acc button:last-child {
-    padding-bottom: 12px;
+    padding-bottom: 10px;
 }
 
+.userAccClass button {
+    background-color: transparent;
+    border-width: 0px;
+    font-weight: bold;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: medium;
+}
+
+.userBox {
+    position: absolute;
+    z-index: 4;
+    margin-top: 0.9rem;
+    margin-left: -1.6rem;
+    padding: 0.6rem 0.7rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #ffffff;
+    box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
+}
+
+.userBox hr {
+    width: 100px;
+    height: 1.3px;
+    margin-top: 0px;
+    margin-bottom: 3px;
+    background: #e6e6e6;
+    border: 0px;
+}
+
+.userBox button {
+    background-color: transparent;
+    padding: 7.6px 20px;
+    border-width: 0px;
+}
+
+.userBox #accBtn {
+    margin-bottom: 3px;
+}
 
 #signupBtn {
     margin: 0px 1.2rem;
@@ -508,7 +547,7 @@ board img {
 
 /* wishlist styles */
 #main-wishlist {
-    padding: 0rem 2rem 1rem 2rem;
+    padding: 0rem 2rem 3rem 2rem;
     /* background-color: #f4e1e3; */
 }
 

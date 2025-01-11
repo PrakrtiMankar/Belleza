@@ -56,7 +56,8 @@ menuBtn.addEventListener('click', () => {
     
     IsMenuShown = !IsMenuShown;
     showNav(IsMenuShown);
-})
+});
+
 function showNav(IsMenuShown) {
     if(IsMenuShown == false){
         MenuBox.style.display = 'none';
@@ -98,8 +99,11 @@ function showNav(IsMenuShown) {
 let signupBtn = document.querySelector('.signupLink');
 let userAcc = document.createElement('div');
 userAcc.classList.add('user-acc');
-userAcc.innerHTML = `<button>Account<button><button id="logout" href="#">Logout</button>`;
 
+userAcc.innerHTML = `<button>Account<button><button id="logout" href="#">Logout</button>`;
+userAcc.querySelector('#logout').addEventListener('click', () => {
+    console.log('logout')
+})
 signupBtn.append(userAcc);
 
 // check user data
@@ -111,12 +115,30 @@ window.onload = async () => {
         window.location.href = "login.html";
     }
     else {
+        let userBoxDisplay = 'none';
         console.log(loginData)
         signupBtn.href="#";
         signupBtn.innerHTML = ``;
-        let userAccount = document.createElement('div')
 
-        userAccount.innerHTML =  `<select id="user-tab"><option>Account</option><option id="logout">Logout</option></select>`;
+        let userAccount = document.createElement('div')
+        userAccount.classList.add('userAccClass');
+        // userAccount.innerHTML =  `<select id="user-tab"><option>Account</option><option id="logout">Logout</option></select>`;
+        userAccount.innerHTML =  `<button id="userBtn"><img id="user-icon" src="${Icons.user}"/> User</button>`;
+        userAccount.querySelector("#userBtn").addEventListener('click', () => {
+            userBox.style.display = userBoxDisplay === 'none' ? "flex" : "none";
+        })
+        let userBox = document.createElement('div');
+        userBox.classList.add('userBox');
+        userBox.style.display = userBoxDisplay;
+        userBox.innerHTML = `
+                <button id="accBtn">Account</button>
+                <hr/>
+                <button id="logout">Logout</button>
+            
+        `;
+
+        userAccount.append(userBox);
+
         signupBtn.append(userAccount);
 
         document.getElementById("logout").addEventListener("click", function(){

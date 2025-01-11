@@ -2,9 +2,11 @@ import {getData} from "./crudOperations.js";
 import {Icons} from "../assets/icons.js";
 import {Images} from "../assets/images.js";
 
+// check user is login ?
+
+
 // ⛳ check for userData
 let userArr = [];
-
 
 // ✨✨main container of product
 let main_Product = document.getElementById('main-product');

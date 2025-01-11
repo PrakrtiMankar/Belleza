@@ -1,5 +1,5 @@
 # Belleza
-Belleza - Full Stack e-commerce website - clothing, fashion, beauty, skincare
+Belleza - Full Stack e-commerce website - clothing, fashion, beauty, skincare - Inspired by Nykaa online shopping website
 
 ## Pages
 * Signup Page
@@ -26,3 +26,10 @@ email: "user1@gmail.com"
 password: "@user1"
 
 Please make sure to login the website at the beginning and checkout the index.html page first.
+
+## All inportant links
+
+1. Deployed Github Page - <link href="https://prakrtimankar.github.io/Belleza/">Belleza✨</link>
+
+2. Deployed Glitch  - <link href="https://unmarred-blue-delivery.glitch.me">Json-server</link>
+

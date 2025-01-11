@@ -18,9 +18,10 @@ productBox.classList.add("wishlistBox");
 showProducts();
 
 function showProducts() {
+
     // fetch the wishlist Data
     let wishlistData = localStorage.getItem("wishlistData");
-    let wishlistArr =wishlistData ? JSON.parse(wishlistData) : [];
+    let wishlistArr = wishlistData ? JSON.parse(wishlistData) : [];
 
     wishlistArr.map((item, index) => {
         let card = document.createElement('div');
@@ -42,10 +43,21 @@ function showProducts() {
         let removeBtn = document.createElement("button");
         removeBtn.innerHTML = `Remove`;
         removeBtn.id = "removeBtn";
+        console.log(removeBtn)
 
         removeBtn.addEventListener('click', () => {
-            alert(`removed ${item.pname} from wishlist`)
-        })
+            // Remove the product from wishlistArr
+            wishlistArr.splice(index, 1);
+
+            // Update the localStorage with the updated array
+            localStorage.setItem("wishlistData", JSON.stringify(wishlistArr));
+
+            // Remove the card from the DOM
+            card.remove();
+
+            // Show an alert to the user
+            alert(`Removed ${item.pname} from wishlist`);
+        });
 
         card.append(removeBtn);
         productBox.append(card);

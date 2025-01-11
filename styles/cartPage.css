@@ -1,0 +1,11 @@
+.main-cart section:last-child {
+    padding-bottom: 3rem
+}
+
+#checkout-btn{
+    border: 1.1px solid #000000DD;
+    background-color: black;
+    color: white;
+    padding: 0.8rem 1.4rem;
+    font-weight: 600;
+}
