@@ -5,6 +5,7 @@ let menu = "./assets/icons/menu.png";
 let heart = "./assets/icons/heart.png";
 let cross = "./assets/icons/cross.png";
 let star = "./assets/icons/star.png";
+let confetie = "./assets/icons/confetie.png";
 
 let insta = "./assets/icons/insta.png";
 let pinterest = "./assets/icons/pinterest.png";
@@ -24,5 +25,5 @@ let payment = [card, mcard, paytm, gpay];
 export const Icons = {
     cart, search, user, menu, 
     social, payment, heart,
-    cross, star
+    cross, star, confetie
 };

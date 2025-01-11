@@ -1,3 +1,5 @@
+import {Icons} from "../assets/icons.js";
+
 // Cart array to store selected products
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
@@ -53,11 +55,24 @@ cartItemsContainer.addEventListener("click", (event) => {
         cart.splice(index, 1);
         localStorage.setItem("cart", JSON.stringify(cart));
         renderCart();
+        window.location.reload();
     }
 });
 
 // Initial render
 renderCart();
+
+//thanks ending
+
+let thanksBox = document.createElement('div');
+thanksBox.id = "thanksBox";
+thanksBox.innerHTML = `
+    <p>Order placed!</p>
+    <img src="${Icons.confetie}" />
+    <p>Thank You for Shopping..!</p>
+`;
+
+document.querySelector('.main-cart').append(thanksBox);
 
 // Checkout button functionality
 document.getElementById("checkout-btn").addEventListener("click", () => {
@@ -65,5 +80,10 @@ document.getElementById("checkout-btn").addEventListener("click", () => {
         alert("Your cart is empty!");
     } else {
         alert("Checkout process will begin.");
+        thanksBox.style.display = 'flex';
+        setTimeout(() => {
+            window.location.href = './index.html';
+        }, 1500);
     }
+
 });
