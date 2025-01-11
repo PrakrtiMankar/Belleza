@@ -1,6 +1,16 @@
 # Belleza
 Belleza - Full Stack e-commerce website - clothing, fashion, beauty, skincare - Inspired by Nykaa online shopping website
 
+## Table of Contents
+
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [License](#license)
+- [Contact](#contact)
+
 ## Pages
 * Signup Page
 * Login Page
