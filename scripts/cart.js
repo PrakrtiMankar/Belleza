@@ -83,6 +83,8 @@ document.getElementById("checkout-btn").addEventListener("click", () => {
         thanksBox.style.display = 'flex';
         setTimeout(() => {
             window.location.href = './index.html';
+            let emptyCart = '';
+            localStorage.setItem("cart", JSON.stringify(emptyCart));
         }, 1500);
     }
 
