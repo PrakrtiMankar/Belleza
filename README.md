@@ -29,7 +29,7 @@ Please make sure to login the website at the beginning and checkout the index.ht
 
 ## All inportant links
 
-1. Deployed Github Page - <link href="https://prakrtimankar.github.io/Belleza/">Belleza✨</link>
+1. Deployed Github Page - <a href="https://prakrtimankar.github.io/Belleza/">Belleza✨</a>
 
-2. Deployed Glitch  - <link href="https://unmarred-blue-delivery.glitch.me">Json-server</link>
+2. Deployed Glitch  - <a href="https://unmarred-blue-delivery.glitch.me">Json-server</a>
 
