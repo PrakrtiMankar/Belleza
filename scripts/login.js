@@ -43,7 +43,7 @@ function LoginFunc(email, password) {
                 alert('Login success...');
                 //store user data in Local Storage
                 localStorage.setItem("loginData", JSON.stringify(user[0]))
-                window.location.href = "product.html";
+                window.location.href = "index.html";
             }
             else{
                 alert('Incorrect Password! Please enter correct password.')
