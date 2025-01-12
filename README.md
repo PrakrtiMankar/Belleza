@@ -1,6 +1,8 @@
 # **Belleza ✨**
 **Belleza** - Full Stack E-commerce Website for clothing, fashion, beauty, and skincare 🌟 Inspired by the **Nykaa** online shopping platform.
 
+![Home Page](https://github.com/user-attachments/assets/d8fe0542-c9f2-4f1f-805f-2f18815e0a11)
+
 ---
 
 ## **📜 Table of Contents**
@@ -21,7 +23,7 @@
 - 🛍️ **Product Browsing**: Explore a wide range of products with detailed descriptions and images.
 - 📊 **Filtering**: Implemented advanced filter and sorting features.
 - 🛒 **Shopping Cart**: Add products to the cart, manage quantities, and view a seamless cart page.
-- ❤️ **Wishlist**: Save your favorite items on a wishlist page.
+- ❤️ **Wishlist**: Save your favourite items on a wishlist page.
 - 📱 **Responsive Design**: Fully optimized for desktop and mobile devices.
 
 ---
@@ -62,13 +64,40 @@ After setting up the project, you can access the application at:
 
 ## **📄 Pages** 🗂✨
 - 🖍️ **Signup Page**
+  ```
+     ![Sgnup Page](https://github.com/user-attachments/assets/12b4c73c-5ffc-4c60-b338-21491bec77de)
+
+  ```
 - 🔐 **Login Page**
+  ```
+     ![Login Page](https://github.com/user-attachments/assets/67fdd4d4-9b17-4d2a-8553-6617b0d0603a)
+
+  ```
 - 🏠 **Home Page**
+  ```
+     ![Home Page](https://github.com/user-attachments/assets/970cadc0-c11a-4060-944e-5bafc8e1b76f)
+  
+  ```
 - 🛍️ **Product Page**
+  ```
+     ![Product Page](https://github.com/user-attachments/assets/9a9ca6c8-cb02-4179-912b-cf9166638d5b)
+
+  ```
 - ❤️ **Wishlist Page**
+  ```
+     ![Wishlist Page](https://github.com/user-attachments/assets/afcf8123-2e6a-4d5d-a21a-c9066b5fe22c)
+
+  ```
 - 🛒 **Cart Page**
+  ```
+     ![Cert Page](https://github.com/user-attachments/assets/d30d6c23-3cbd-4348-9838-b025aeca3a5b)
+
+  ```
 - 💳 **Checkout Page**
-- 💰 **Payment Page**
+  ```
+     ![Checkout Page](https://github.com/user-attachments/assets/8b3531b5-ef0d-44fb-a784-d28107b06166)
+
+  ```
 
 ---
 
