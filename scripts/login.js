@@ -12,10 +12,15 @@ header.innerHTML = `
 
 let form = document.querySelector('form');
 
+form.email.value = 'new@gmail.com'
+form.password.value = '@user'
+
 form.addEventListener("submit", () => {
     event.preventDefault()
     let email = form.email.value
     let password = form.password.value
+    // let email = 'p@gmail.com'
+    // let password = '@p'
 
     if(email == '' || password == ''){
         let emptyString = email == '' ? "email" : password == '' ? "password" : null;
