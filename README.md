@@ -1,5 +1,12 @@
-# **Belleza ✨**
-**Belleza** - Full Stack E-commerce Website for clothing, fashion, beauty, and skincare 🌟 Inspired by the **Nykaa** online shopping platform.
+# **Belleza ✨**  
+
+***Full Stack E-commerce Website for clothing, fashion, beauty, and skincare 🌟 Inspired by the **Nykaa** online shopping platform.***
+
+‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎  ‎ ‎ ‎ ‎‎ ‎‎ ‎  ‎ ‎ ‎ ‎ ‎ ‎‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎‎ ‎ ‎ ‎ ‎ ‎‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎  ‎ ‎ ‎ ‎‎ ‎‎ ‎  ‎ ‎ ‎ ‎ ‎ ‎‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎‎ ‎ ‎ ‎ ‎ ‎‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎  ‎ ‎ ‎ ‎‎ ‎‎ ‎  ‎ ‎ ‎ ‎ ‎ ‎‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎‎ ‎ ‎ ‎ ‎ ‎‎ ‎ ‎ ‎ ‎ ‎ ‎
+
+ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎  ‎ ‎ ‎ ‎‎ ‎‎ ‎  ‎ ‎ ‎ ‎ ‎ ‎‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎‎ ‎ ‎ ‎ ‎ ‎‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎  <img alt="belleza_LOGO" src="https://github.com/user-attachments/assets/bfcf8f43-7d20-417a-95dc-5e3d4ec0f1bf" width="360px" />
+
+
 
 ![Home Page](https://github.com/user-attachments/assets/d8fe0542-c9f2-4f1f-805f-2f18815e0a11)
 
@@ -23,7 +30,7 @@
 - 🛍️ **Product Browsing**: Explore a wide range of products with detailed descriptions and images.
 - 📊 **Filtering**: Implemented advanced filter and sorting features.
 - 🛒 **Shopping Cart**: Add products to the cart, manage quantities, and view a seamless cart page.
-- ❤️ **Wishlist**: Save your favourite items on a wishlist page.
+- ❤️ **Wishlist**: Save your favorite items on a wishlist page.
 - 📱 **Responsive Design**: Fully optimized for desktop and mobile devices.
 
 ---
