@@ -126,7 +126,7 @@ You can log in to the website with the following credentials:
 ## **🌐 All Important Links** 🔗
 
 1. **Deployed GitHub Page**: [Belleza ✨](https://prakrtimankar.github.io/Belleza/)  
-2. **Deployed Glitch JSON Server**: [JSON Server 🚀](https://unmarred-blue-delivery.glitch.me)
+2. **Deployed Glitch JSON Server**: [JSON Server 🚀](https://heady-pickle-lightyear.glitch.me)
 
 ---
 

@@ -39,7 +39,7 @@ function LoginFunc(email, password) {
 
     console.log(userArr);
 
-    fetch(`https://unmarred-blue-delivery.glitch.me/users`)
+    fetch(`https://heady-pickle-lightyear.glitch.me/users`)
     .then((res) => res.json())
     .then((data) => {
         let user = data.filter((el, i) => el.email == email)

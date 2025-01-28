@@ -17,7 +17,7 @@ export const postData = (userData, bodyContent) => {
         }
         else{
             //user not present
-            fetch(`https://unmarred-blue-delivery.glitch.me/users`, {
+            fetch(`https://heady-pickle-lightyear.glitch.me/users`, {
                 method: "POST",
                 headers: {
                     "Content-type": "application/json",
